@@ -32,3 +32,19 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 }) -> name('contact');
+
+Route::get('/add/{first}/{second}', function($first, $second){
+    return $first + $second;
+});
+
+Route::get('/substract/{first}/{second}', function($first, $second){
+    return $first - $second;
+});
+
+Route::get('/divide/{first}/{second}', function($first, $second){
+    return $first / $second;
+});
+
+Route::get('/multiple/{first}/{second}', function($first, $second){
+    return $first * $second;
+});
