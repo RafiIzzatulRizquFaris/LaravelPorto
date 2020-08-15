@@ -48,3 +48,10 @@ Route::get('/divide/{first}/{second}', function($first, $second){
 Route::get('/multiple/{first}/{second}', function($first, $second){
     return $first * $second;
 });
+
+Route::get('/allguru', 'GuruController@all_guru');
+Route::get('/cekkoneksi', 'GuruController@cek_koneksi');
+Route::get('/simpanguru/{nik}/{nama}/{tgl}/{alamat}', 'GuruController@simpan_guru');
+Route::get('/temukanguru/{find}', 'GuruController@find_guru');
+Route::get('/hapusguru/{find}', 'GuruController@hapus_guru');
+Route::get('/editguru/{find}/{nik}/{nama}/{tgl}/{alamat}', 'GuruController@edit_guru');
